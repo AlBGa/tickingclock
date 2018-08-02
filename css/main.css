@@ -1,0 +1,92 @@
+@font-face {
+	font-family: ModernMTSBold;
+	src: url('../resources/Fonts/ModernMTStd-Bold.otf');
+}
+
+@font-face {
+	font-family: GillSans;
+	src: url('../resources/Fonts/GillSans.ttc');
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: #000;
+}
+
+main {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	background: url('../resources/Screens_Background.png') no-repeat;
+	background-size: cover;
+	overflow: hidden;
+}
+
+#clockcontainer {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+#clock {
+	position: relative;
+	height: 113vh;
+	width: 100vw;
+}
+
+#daycountdown {
+	font-family: GillSans;
+	text-align: center;
+	font-size: 8vw;
+	position: absolute;
+	top: 12%;
+	width: 100%;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	font-weight: bolder;
+}
+
+#daycountdown span {
+	font-size: 2.5em;
+	vertical-align: middle;
+	font-family: ModernMTSBold;
+}
+.clockhand {
+	position: absolute;
+	transform-origin: 73% 29%;
+}
+
+#hourhand {
+	top: 50vh;
+	left: 38vw;
+	width: 17%;
+	transform: rotate(180deg);
+}
+
+#minutehand {
+	top: 48.8vh;
+	left: 33.8vw;
+	width: 23%;	
+	transform: rotate(80deg);
+}
+
+#undertext {
+	font-family: GillSans;
+	text-align: center;
+	font-size: 3vw;
+	position: absolute;
+	bottom: 2vh;
+	width: 100%;
+	text-transform: uppercase;
+}
+
+#undertext p:nth-child(even) {
+	font-weight: bold;
+	font-size: 1.8em;
+	margin: 2vh auto;
+}
+

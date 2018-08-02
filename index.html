@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<main>
+		<div id="daycountdown">Only <span id="daystoend"></span> days</div>
+		<div id="clockcontainer">
+			<img id="clock" src="resources/Screens_Clock_Face.png" alt="">
+			<img class="clockhand" id="hourhand" src="resources/Screens_Clock_Hand3.png" alt="">
+			<img class="clockhand" id="minutehand" src="resources/Screens_Clock_Hand3.png" alt="">
+		</div>
+		<div id="undertext">
+			<p>Until your new</p>
+			<p>Screen - walla</p>
+			<p>Is at your service</p>
+		</div>
+	</main>
+	<script>
+		const hourhand = document.getElementById('hourhand');
+		const minutehand = document.getElementById('minutehand');
+		const timerend = new Date(2018, 8, 9);
+		
+		const checkDayEnd = function() {
+			let date = new Date();
+			document.getElementById('daystoend').textContent = timerend.getDate() - date.getDate(); 
+		}
+
+		const clockhands = function() {
+			let date = new Date();
+			let hr = date.getHours();
+			let mn = date.getMinutes();
+			let sc = date.getSeconds();
+			let hrPosition = hr*360/12 + ((mn * 360/60)/12) + 133;
+			let minPosition = (mn * 360/60) + (sc* 360/60)/60 + 133;
+			let secPosition = sc * 360/60 + 133;
+			hourhand.style.transform = "rotate(" + hrPosition + "deg)";
+			minutehand.style.transform = "rotate(" + minPosition + "deg)";
+			checkDayEnd();
+
+		}
+		var interval = setInterval(clockhands, 1000);
+
+
+	</script>
+</body>
+</html>
