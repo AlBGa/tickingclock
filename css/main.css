@@ -90,3 +90,25 @@ main {
 	margin: 2vh auto;
 }
 
+@media screen & (min-width: 750px) {
+	#daycountdown {
+		font-family: GillSans;
+		text-align: center;
+		font-size: 12vh;
+		position: absolute;
+		top: 12%;
+		width: 100%;
+		text-transform: uppercase;
+		letter-spacing: 0.2em;
+		font-weight: bolder;
+	}
+	#undertext {
+		font-family: GillSans;
+		text-align: center;
+		font-size: 3vh;
+		position: absolute;
+		bottom: 2vh;
+		width: 100%;
+		text-transform: uppercase;
+	}
+}
