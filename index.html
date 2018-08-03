@@ -26,7 +26,8 @@
 		
 		var checkDayEnd = function() {
 			var date = new Date();
-			document.getElementById('daystoend').textContent = timerend.getDate() - date.getDate(); 
+			
+			//timerend.getDate() - date.getDate()
 		}
 
 		var clockhands = function() {
@@ -40,7 +41,7 @@
 			hourhand.style.transform = "rotate(" + hrPosition + "deg)";
 			minutehand.style.transform = "rotate(" + minPosition + "deg)";
 			checkDayEnd();
-
+			document.getElementById('daystoend').textContent = 'Current hr: ' + hr + '/ Current mn: ' + mn + '/ hrPosition: ' + hrPosition + '/ minPosition' + minPosition + '/ secPosition' + secPosition; 
 		}
 		var interval = setInterval(clockhands, 1000);
 
