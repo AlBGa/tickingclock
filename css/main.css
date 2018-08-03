@@ -51,12 +51,16 @@ main {
 }
 
 #daycountdown span {
-	/* font-size: 2.5em; */
+	font-size: 2.5em;
 	vertical-align: middle;
 	font-family: ModernMTSBold;
 }
 .clockhand {
 	position: absolute;
+	-webkit-transform-origin: 73% 29%;
+	-moz-transform-origin: 73% 29%;
+	-o-transform-origin: 73% 29%;
+	-ms-transform-origin: 73% 29%;
 	transform-origin: 73% 29%;
 }
 
@@ -83,7 +87,7 @@ main {
 #undertext {
 	font-family: GillSans;
 	text-align: center;
-	/* font-size: 2.4vw; */
+	font-size: 2.4vw;
 	position: absolute;
 	bottom: 2vh;
 	width: 100%;
