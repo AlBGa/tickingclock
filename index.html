@@ -40,7 +40,7 @@
 			var secPosition = sc * 360/60 + 133;
 			hourhand.style.transform = "rotate(" + hrPosition + "deg)";
 			minutehand.style.transform = "rotate(" + minPosition + "deg)";
-			checkDayEnd();
+			//checkDayEnd();
 			document.getElementById('daystoend').textContent = 'Current hr: ' + hr + '/ Current mn: ' + mn + '/ hrPosition: ' + hrPosition + '/ minPosition' + minPosition + '/ secPosition' + secPosition; 
 		}
 		var interval = setInterval(clockhands, 1000);
