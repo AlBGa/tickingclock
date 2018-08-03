@@ -20,23 +20,23 @@
 		</div>
 	</main>
 	<script>
-		const hourhand = document.getElementById('hourhand');
-		const minutehand = document.getElementById('minutehand');
-		const timerend = new Date(2018, 8, 9);
+		var hourhand = document.getElementById('hourhand');
+		var minutehand = document.getElementById('minutehand');
+		var timerend = new Date(2018, 8, 9);
 		
-		const checkDayEnd = function() {
-			let date = new Date();
+		var checkDayEnd = function() {
+			var date = new Date();
 			document.getElementById('daystoend').textContent = timerend.getDate() - date.getDate(); 
 		}
 
-		const clockhands = function() {
-			let date = new Date();
-			let hr = date.getHours();
-			let mn = date.getMinutes();
-			let sc = date.getSeconds();
-			let hrPosition = hr*360/12 + ((mn * 360/60)/12) + 133;
-			let minPosition = (mn * 360/60) + (sc* 360/60)/60 + 133;
-			let secPosition = sc * 360/60 + 133;
+		var clockhands = function() {
+			var date = new Date();
+			var hr = date.getHours();
+			var mn = date.getMinutes();
+			var sc = date.getSeconds();
+			var hrPosition = hr*360/12 + ((mn * 360/60)/12) + 133;
+			var minPosition = (mn * 360/60) + (sc* 360/60)/60 + 133;
+			var secPosition = sc * 360/60 + 133;
 			hourhand.style.transform = "rotate(" + hrPosition + "deg)";
 			minutehand.style.transform = "rotate(" + minPosition + "deg)";
 			checkDayEnd();
