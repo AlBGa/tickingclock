@@ -26,8 +26,7 @@
 		
 		var checkDayEnd = function() {
 			var date = new Date();
-			
-			//timerend.getDate() - date.getDate()
+			document.getElementById('daystoend').textContent =  timerend.getDate() - date.getDate(); 
 		}
 
 		var clockhands = function() {
@@ -38,10 +37,18 @@
 			var hrPosition = hr*360/12 + ((mn * 360/60)/12) + 133;
 			var minPosition = (mn * 360/60) + (sc* 360/60)/60 + 133;
 			var secPosition = sc * 360/60 + 133;
+			hourhand.style.webkitTransform = "rotate(" + hrPosition + "deg)";
+			hourhand.style.mozTransform = "rotate(" + hrPosition + "deg)";
+			hourhand.style.OTrasnform = "rotate(" + hrPosition + "deg)";
+			hourhand.style.msTransform = "rotate(" + hrPosition + "deg)";
 			hourhand.style.transform = "rotate(" + hrPosition + "deg)";
+
+			minutehand.style.webkitTransform = "rotate(" + minPosition + "deg)";
+			minutehand.style.mozTransform = "rotate(" + minPosition + "deg)";
+			minutehand.style.OTrasnform = "rotate(" + minPosition + "deg)";
+			minutehand.style.msTransform = "rotate(" + minPosition + "deg)";			
 			minutehand.style.transform = "rotate(" + minPosition + "deg)";
-			//checkDayEnd();
-			document.getElementById('daystoend').textContent =  '   hrPosition: ' + hrPosition + ' / minPosition' + minPosition + ' / secPosition' + secPosition + '   '; 
+			checkDayEnd();
 		}
 		var interval = setInterval(clockhands, 1000);
 

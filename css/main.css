@@ -64,6 +64,9 @@ main {
 	top: 50vh;
 	left: 38vw;
 	width: 17%;
+	-webkit-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
 	transform: rotate(180deg);
 }
 
@@ -71,6 +74,9 @@ main {
 	top: 48.8vh;
 	left: 33.8vw;
 	width: 23%;	
+	-webkit-transform: rotate(80deg); 
+	-o-transform: rotate(80deg); 
+	-moz-transform: rotate(80deg); 
 	transform: rotate(80deg);
 }
 
